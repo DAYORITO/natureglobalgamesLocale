@@ -12,7 +12,6 @@ class ApiService {
     }
     if (response.statusCode == 200) {
       List<dynamic> jsonResponse = jsonDecode(response.body);
-      print(jsonResponse);
       return jsonResponse.cast<Map<String, dynamic>>();
     } else {
       throw Exception('Failed to load data');
